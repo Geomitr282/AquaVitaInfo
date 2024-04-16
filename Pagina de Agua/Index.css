@@ -1,0 +1,363 @@
+html{
+    scroll-behavior: smooth;
+    color: white;
+}
+body{
+    margin: 0;
+    background: url("siuuhtml.webp");
+}
+header{
+    display: flex;
+    padding: 5px;
+    background-color: #0c1c46;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 90px;
+    height: 90px;
+}
+
+.container {  
+    opacity: 0.8;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Info Info Donacion"
+    "info2 info3 Donacion"
+    "Localizacion Info-sobre-nosotros Info-sobre-nosotros";
+}
+  
+.Donacion { 
+ grid-area: Donacion; 
+ background-color: #0c1c46;
+ margin: 10px;
+ border-radius: 10px;
+ color: #0c1c46;
+}
+.Donacion h2{
+    color: white;
+    text-align: center;
+}
+.Donacion p{
+    color: white;
+    text-align: center;
+}
+
+.Donacion:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+
+.Info {
+ color: #0c1c46;
+ grid-area: Info; 
+ margin: 10px;
+ background-color: #0c1c46;
+ border-radius: 10px;
+}
+.Info h2{
+    color: white;
+    text-align: center;
+}
+#txtprincipal1{
+    color: white;
+    padding-left: 10px;
+
+}
+.Info span{
+    color: white;
+    margin-left: 47%;
+    text-decoration: underline;
+}
+
+.contenido {
+    color: #0c1c46;
+    padding: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.contenido.hidden {
+    max-height: 0;
+}
+
+.contenido:not(.hidden) {
+    max-height: 1000px; /* Una altura máxima suficientemente grande para acomodar cualquier texto */
+}
+
+/*Informacion11*/
+.contenido h2{
+    color: white;
+    text-align: center;
+}
+.contenido p{
+    color: white;
+}
+
+.Info:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+  
+.Info-sobre-nosotros {
+    
+    grid-area: Info-sobre-nosotros; 
+    color: #0c1c46;
+    margin: 10px;
+    background-color: #0c1c46;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.Info-sobre-nosotros h2{
+    text-align: center;
+    color: white;
+}
+.Info-sobre-nosotros p{
+    color: white;
+    text-align: center;
+}
+
+.Info-sobre-nosotros:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+  
+.info2 {
+    color: #0c1c46;
+  grid-area: info2;
+  background-color: #0c1c46;
+  margin: 10px;
+  border-radius: 10px; 
+}
+.info2:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+
+.info2 h2{
+    color: white;
+    text-align: center;
+}
+
+.info2 span{
+    color: white;
+    margin-left: 43%;
+    text-decoration: underline;
+}
+  
+.info3 {
+    color: #0c1c46;
+    grid-area: info3;
+    background-color: #0c1c46;
+    margin: 10px;
+    border-radius: 10px; 
+}
+.info3:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+
+.info3 h2{
+    color: white;
+    text-align: center;
+}
+
+.info3 span{
+    color: white;
+    margin-left: 43%;
+    text-decoration: underline;
+}
+  
+.Localizacion {
+    grid-area: Localizacion;
+    color: #0c1c46;
+    margin: 10px;
+    background-color: #0c1c46;
+    margin: 10px;
+    border-radius: 10px; 
+}
+.Localizacion h2{
+    text-align: center;
+    color: white;
+}
+.Localizacion p{
+    color: white;
+    text-align: center;
+}
+.Localizacion:hover{
+    box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+    transition:all 0.4s linear;
+}
+
+.Localizacion span{
+    color: white;
+    margin-left: 45%;
+    text-decoration: underline;
+}
+  
+  
+html, body , .container {
+    height: 100%;
+    margin: 0;
+}
+  
+  /* For presentation only, no need to copy the code below */
+  
+.container * {
+    position: relative;
+}
+  
+.container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/*Celulares*/
+@media (max-width: 767px) {
+    header{
+        margin: 0;
+        padding: 10px;
+        background-color: #273358;
+        text-align: center;
+    }
+    
+    .container {  
+        display: grid;
+        padding-top: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.3fr 1.6fr 0.6fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "Info Info"
+        "info2 info3"
+        "Localizacion Localizacion"
+        "Info-sobre-nosotros Info-sobre-nosotros"
+        "Donacion Donacion";
+    }
+      
+    .Info { 
+        grid-area:Info; 
+        margin: 10px; 
+        border-radius: 10px;
+    }
+    .Info h2{
+        text-align: center;
+        color: white;
+    }
+      
+    .info2 { 
+        grid-area:info2; 
+        margin: 10px; 
+        border-radius: 10px;
+    }
+      
+    .info3 { 
+        grid-area:info3; 
+        margin:10px; 
+        border-radius: 10px;
+    }
+      
+    
+    .Donacion { 
+        grid-area: Donacion; 
+        background-color: #0c1c46;
+        margin: 10px;
+        border-radius: 10px;
+        color: #0c1c46;
+    }
+    .Donacion:hover{
+           box-shadow:inset 0 0 5px aqua,0 0 10px aqua,0 0 20px aqua;
+           transition:all 0.4s linear;
+    }
+       
+    .donaimg{
+           align-items: center;
+           width: 50%;
+           height: 50%;
+           opacity: 0.7;
+    }
+    .imgdona{
+           color: #0c1c46;
+           text-align: center;
+           margin-right: 30px;
+    }
+    button{
+           width: 60%;
+           height: 25%;
+           margin-left: 20%;
+           background-color: #273358;
+           color: white;
+           border: 2px solid #0c1c46;
+    }
+    button:hover{
+          background-color: rgb(17, 201, 17);
+          border: 2px solid rgb(17, 201, 17);
+          transition: all 0.4s linear;
+    }
+      
+    .Localizacion { 
+        grid-area:Localizacion; 
+        margin: 10px; 
+        border-radius: 10px;
+    }
+      
+    .Info-sobre-nosotros { 
+        grid-area:Info-sobre-nosotros; 
+        margin: 10px; 
+        border-radius: 10px;
+    }
+      
+      
+    html, body , .container {
+        height: 100%;
+        margin: 0;
+    }
+      
+    /* For presentation only, no need to copy the code below */
+      
+    .container * {
+        position: relative;
+    }
+      
+    .container *:after {
+        content:attr(class);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+      
+      
+}
+
+/*Tablets*/
+@media (min-width: 768px) and (max-width: 990px) {
+    
+}
+
+  
